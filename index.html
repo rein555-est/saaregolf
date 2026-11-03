@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TESTVERSIOON: eemalda see rida, kui leht läheb domeenile saaregolf.ee -->
+<meta name="robots" content="noindex, nofollow">
+<title>Golfiväljak Saaremaal Kuressaares | Saare Golf</title>
+<meta name="description" content="18-rajaline golfiväljak Saaremaal, 15 minutit jala Kuressaare kesklinnast. Green Card pole vajalik, lapsed kuni 12 a. tasuta. Broneeri tii aeg veebis.">
+<link rel="canonical" href="https://saaregolf.ee/">
+<!-- Keeleversioonid: eraldi URL-id, inimese tehtud tõlge (vt juhend) -->
+<link rel="alternate" hreflang="et" href="https://saaregolf.ee/">
+<link rel="alternate" hreflang="en" href="https://saaregolf.ee/en/">
+<link rel="alternate" hreflang="fi" href="https://saaregolf.ee/fi/">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GolfCourse",
+  "name": "Saaremaa Golf & Country Club",
+  "alternateName": "Saare Golf",
+  "url": "https://saaregolf.ee/",
+  "logo": "https://saaregolf.ee/logo.svg",
+  "telephone": "+372 453 3502",
+  "email": "booking@saaregolf.ee",
+  "priceRange": "35–100 €",
+  "currenciesAccepted": "EUR",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Merikotka 35",
+    "postalCode": "93810",
+    "addressLocality": "Kuressaare",
+    "addressRegion": "Saaremaa",
+    "addressCountry": "EE"
+  },
+  "sameAs": [
+    "https://www.facebook.com/saaregolf",
+    "https://www.instagram.com/saaregolf"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Kas mul peab olema Green Card või HCP?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Ei pea. Green Card ega händikäp ei ole nõutav. Broneeri aeg ja tule mängima."}},
+    {"@type": "Question", "name": "Kas väljak on täna lahti?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Kui broneerimissüsteemis saab stardiaega broneerida, on väljak lahti. Hooaeg kestab 1. aprillist 31. oktoobrini."}},
+    {"@type": "Question", "name": "Kas saan broneeringu tühistada?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Jah, tasuta kuni 24 tundi enne stardiaega."}},
+    {"@type": "Question", "name": "Kas saab varustust rentida?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Jah. Premium golfisett koos käruga maksab 40 €, üksik kepp 2 € ja golfiauto 35–45 €."}},
+    {"@type": "Question", "name": "Kas lapsed saavad kaasa tulla?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Jah. Iga maksev täiskasvanu võib kaasa võtta kuni kaks last vanuses kuni 12 aastat tasuta. Juuniorid kuni 21 aastat saavad 50% soodustust."}},
+    {"@type": "Question", "name": "Mida green fee sisaldab?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Golfikäru, sauna ja riietusruumi. Hind sõltub nõudlusest: varem broneerides on soodsam."}}
+  ]
+}
+</script>
+
+<style>
+/* =========================================================
+   DISAINISÜSTEEM — Saare Golf
+   Meeleolu: rahulik, looduslähedane, soe
+   Kõik kontrastid kontrollitud WCAG AA vastu (≥ 4.5:1 tekstil)
+   ========================================================= */
+:root {
+  /* Põhivärv — logo sinine (SGCC_logo.pdf: RGB 40,110,183).
+     Valge tekst sellel 5.2:1, heledal taustal 4.9:1, liival 4.0:1 (liival ainult suur tekst) */
+  --color-primary: #286EB7;
+  /* Sama toon tumedamana lingiks ja väikeseks tekstiks: taustal 6.6:1, liival 5.3:1 */
+  --color-primary-text: #1E5A99;
+  /* Jaluse taust, valge tekst sellel 9.7:1 */
+  --color-primary-dark: #1A4675;
+
+  /* Lisavärv 1 — soe terrakota, ainult broneerimisnupp ja rõhud.
+     Valge tekst sellel: 5.7:1 */
+  --color-accent: #A84B24;
+  --color-accent-dark: #8A3C1C;
+
+  /* Lisavärv 2 — sammal / kadakas, väikesed sildid ja ikoonid.
+     Liivataustal: 4.5:1 */
+  --color-moss: #4F6B3A;
+
+  /* Neutraalsed (soojad, mitte külmad hallid) */
+  --color-bg: #FBF8F2;        /* lehe taust */
+  --color-sand: #E9DFCC;      /* vahelduvad plokid */
+  --color-surface: #FFFFFF;   /* kaardid */
+  --color-text: #2B2620;      /* põhitekst, taustal 14:1 */
+  --color-muted: #5E554A;     /* teisene tekst, taustal 6.9:1 */
+  --color-line: #D9CFBD;      /* jooned ja raamid */
+  --color-focus: #A84B24;
+
+  /* Fondid */
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+  /* Suurused (mobiil → desktop) */
+  --fs-h1: clamp(2rem, 5vw + 1rem, 3.25rem);
+  --fs-h2: clamp(1.5rem, 2.5vw + 1rem, 2.25rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1.0625rem;   /* 17px */
+  --fs-small: 0.875rem;   /* 14px */
+  --lh-body: 1.6;
+
+  /* Ruum ja vormid */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --radius: 10px;
+  --radius-pill: 999px;
+  --shadow: 0 2px 12px rgba(43, 38, 32, 0.08);
+  --max-width: 1120px;
+  --header-h: 76px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  padding-bottom: 72px; /* ruum kleepuvale nupule mobiilis */
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--color-primary-text); }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; margin: 0 0 var(--space-2); }
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+p { margin: 0 0 var(--space-2); }
+small, .small { font-size: var(--fs-small); }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-2); }
+.section { padding: var(--space-5) 0; }
+.section--sand { background: var(--color-sand); }
+.eyebrow { color: var(--color-moss); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: var(--fs-small); margin-bottom: var(--space-1); }
+.lead { font-size: 1.2rem; color: var(--color-muted); max-width: 60ch; }
+.fill { background: #FFF3C4; color: #5A4300; padding: 0 .25em; border-radius: 4px; font-size: .95em; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--color-surface); padding: var(--space-1) var(--space-2); z-index: 100; }
+.skip:focus { left: var(--space-2); }
+
+/* ---------- Nupud ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  min-height: 48px; padding: 0 1.5rem;
+  border-radius: var(--radius-pill);
+  font: 600 1rem var(--font-body);
+  text-decoration: none; cursor: pointer; border: 2px solid transparent;
+  transition: background .15s, color .15s;
+}
+.btn--primary { background: var(--color-accent); color: #fff; }
+.btn--primary:hover { background: var(--color-accent-dark); }
+.btn--secondary { background: transparent; color: var(--color-primary-text); border-color: var(--color-primary-text); }
+.btn--secondary:hover { background: var(--color-primary-text); color: #fff; }
+.btn--light { background: transparent; color: #fff; border-color: #fff; }
+.btn--light:hover { background: #fff; color: var(--color-primary-dark); }
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* ---------- Päis ---------- */
+.header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--color-bg); border-bottom: 1px solid var(--color-line);
+}
+.header__inner { display: flex; align-items: center; justify-content: space-between; min-height: var(--header-h); gap: var(--space-2); }
+.header__logo img { height: 56px; width: auto; }
+.menu-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border: 0; background: transparent; cursor: pointer; border-radius: var(--radius);
+}
+.menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+  display: block; width: 24px; height: 2px; background: var(--color-text); position: relative; content: "";
+}
+.menu-toggle span::before { position: absolute; top: -7px; }
+.menu-toggle span::after { position: absolute; top: 7px; }
+.nav { display: none; position: absolute; top: var(--header-h); left: 0; right: 0; background: var(--color-bg); border-bottom: 1px solid var(--color-line); padding: var(--space-2); }
+.nav.open { display: block; }
+.nav ul { list-style: none; margin: 0; padding: 0; }
+.nav a { display: block; padding: .75rem 0; text-decoration: none; color: var(--color-text); font-weight: 600; }
+.nav a:hover { color: var(--color-primary-text); }
+.lang { display: flex; gap: var(--space-2); margin-top: var(--space-1); font-size: var(--fs-small); }
+.lang a { padding: .25rem 0; font-weight: 400; }
+.lang [aria-current] { font-weight: 600; color: var(--color-primary-text); }
+.header__cta { display: none; }
+
+/* ---------- Avaplokk ---------- */
+.hero { position: relative; color: #fff; background: #2B2620; }
+.hero img { width: 100%; height: 72vh; min-height: 420px; max-height: 680px; object-fit: cover; }
+.hero__content { position: absolute; inset: 0; display: flex; align-items: flex-end; background: linear-gradient(to top, rgba(28,22,14,.88) 0%, rgba(28,22,14,.6) 40%, rgba(28,22,14,0) 70%); }
+.hero__content .wrap { padding-bottom: var(--space-4); width: 100%; }
+.hero h1 { max-width: 22ch; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+.hero p { font-size: 1.2rem; max-width: 46ch; }
+.facts { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); list-style: none; padding: 0; margin: var(--space-3) 0 0; font-weight: 600; }
+
+/* ---------- Kaardid ---------- */
+.grid { display: grid; gap: var(--space-3); grid-template-columns: 1fr; }
+.card { background: var(--color-surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+.card img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
+.card__body { padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-1); flex: 1; }
+.card__price { font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-primary); }
+.card__body .btn { margin-top: auto; align-self: flex-start; }
+.badge { display: inline-block; background: var(--color-sand); color: var(--color-moss); font-weight: 600; font-size: var(--fs-small); padding: .15rem .6rem; border-radius: var(--radius-pill); align-self: flex-start; }
+
+/* ---------- Lugu ---------- */
+.story { display: grid; gap: var(--space-4); }
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2); list-style: none; padding: 0; margin: 0; }
+.stats li { background: var(--color-surface); border-radius: var(--radius); padding: var(--space-2); }
+.stats strong { display: block; font-family: var(--font-heading); font-size: 1.75rem; color: var(--color-primary); }
+
+/* ---------- KKK ---------- */
+.faq details { background: var(--color-surface); border-radius: var(--radius); margin-bottom: var(--space-1); box-shadow: var(--shadow); }
+.faq summary { cursor: pointer; padding: var(--space-2) var(--space-3); font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: var(--space-2); min-height: 48px; align-items: center; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 1.5rem; color: var(--color-primary); line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq details > div { padding: 0 var(--space-3) var(--space-2); }
+
+/* ---------- Arvustused ---------- */
+.review { background: var(--color-surface); border-radius: var(--radius); padding: var(--space-3); box-shadow: var(--shadow); margin: 0; }
+.review blockquote { margin: 0 0 var(--space-2); font-family: var(--font-heading); font-size: 1.15rem; }
+.review figcaption { color: var(--color-muted); font-size: var(--fs-small); }
+
+/* ---------- Asukoht ja kontakt ---------- */
+.two-col { display: grid; gap: var(--space-4); }
+.list-plain { list-style: none; padding: 0; margin: 0; }
+.list-plain li { padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line); }
+.contact a { font-weight: 600; }
+
+/* ---------- Hinnatabel ---------- */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: var(--color-surface); border-radius: var(--radius); }
+th, td { text-align: left; padding: .75rem 1rem; border-bottom: 1px solid var(--color-line); vertical-align: top; }
+th { background: var(--color-sand); }
+td:nth-child(2) { white-space: nowrap; font-weight: 600; }
+
+/* ---------- Alamlehed (ühes failis, #hash) ---------- */
+.page { display: none; }
+.page:target { display: block; }
+body:has(.page:target) .home { display: none; }
+.back { display: inline-block; margin-bottom: var(--space-3); }
+
+/* ---------- Jalus ---------- */
+.footer { background: var(--color-primary-dark); color: #fff; padding: var(--space-4) 0 var(--space-3); }
+.footer a { color: #fff; }
+.footer__grid { display: grid; gap: var(--space-3); }
+.footer h2 { font-size: 1.15rem; color: #fff; }
+.footer small { opacity: .9; display: block; margin-top: var(--space-3); }
+
+/* ---------- Kleepuv broneerimisnupp (mobiil) ---------- */
+.sticky-book {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  padding: .75rem var(--space-2); background: var(--color-bg); border-top: 1px solid var(--color-line);
+}
+.sticky-book .btn { width: 100%; }
+
+/* ---------- Suurem ekraan ---------- */
+@media (min-width: 700px) {
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .two-col, .story { grid-template-columns: 1fr 1fr; align-items: start; }
+  .footer__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 960px) {
+  body { padding-bottom: 0; }
+  .sticky-book { display: none; }
+  .menu-toggle { display: none; }
+  .nav { display: flex !important; position: static; padding: 0; border: 0; align-items: center; gap: var(--space-3); background: none; }
+  .nav ul { display: flex; gap: var(--space-3); }
+  .nav a { padding: .5rem 0; }
+  .lang { margin: 0; }
+  .header__cta { display: inline-flex; }
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+
+<body>
+<a class="skip" href="#sisu">Liigu sisu juurde</a>
+
+<!-- ================= PÄIS ================= -->
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="header__logo" href="#top" aria-label="Saare Golf – avaleht">
+      <img src="logo.svg" alt="Saaremaa Golf &amp; Country Club" width="97" height="56">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <nav class="nav" id="menu" aria-label="Peamenüü">
+      <ul>
+        <li><a href="#hinnad">Hinnad</a></li>
+        <li><a href="#paketid">Golf + majutus</a></li>
+        <li><a href="#grupid">Grupid ja firmapäevad</a></li>
+        <li><a href="#kkk">KKK</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <div class="lang" aria-label="Keel">
+        <a href="https://saaregolf.ee/" hreflang="et" lang="et" aria-current="true">ET</a>
+        <a href="https://saaregolf.ee/fi/" hreflang="fi" lang="fi">FI</a>
+        <a href="https://saaregolf.ee/en/" hreflang="en" lang="en">EN</a>
+      </div>
+    </nav>
+    <a class="btn btn--primary header__cta" href="https://saaregolf.ee/saare-golfi-tii-ajad/">Broneeri aeg</a>
+  </div>
+</header>
+
+<main id="sisu">
+
+<!-- ================= AVALEHT ================= -->
+<div class="home" id="top">
+
+  <!-- Avaplokk -->
+  <section class="hero" aria-labelledby="h1">
+    <img src="images/valjak-ja-kuressaare.jpg" alt="Saare Golfi väljak õhust loojanguvalguses, tiigid ja punkrid, taamal Kuressaare linn" width="1600" height="1066" fetchpriority="high">
+    <div class="hero__content">
+      <div class="wrap">
+        <h1 id="h1">Golfiväljak Saaremaal, Kuressaare kesklinna kõrval</h1>
+        <p>Saare Golf on 18-rajaline golfiväljak Saaremaal, kuhu jõuad Kuressaare kesklinnast 15 minutiga jala. Mängi ringi hommikul ja ole õhtuks spaas.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="https://saaregolf.ee/saare-golfi-tii-ajad/">Broneeri tii aeg</a>
+          <a class="btn btn--light" href="#paketid">Golf + majutus</a>
+        </div>
+        <ul class="facts">
+          <li>18 rada</li>
+          <li>Green Card pole vajalik</li>
+          <li>Lapsed kuni 12 a. tasuta</li>
+          <li>Avatud 1.04–31.10</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tooted -->
+  <section class="section" id="tooted" aria-labelledby="tooted-h">
+    <div class="wrap">
+      <p class="eyebrow">Mida pakume</p>
+      <h2 id="tooted-h">Vali oma golfipäev</h2>
+      <p class="lead">Hinnad on dünaamilised: mida varem broneerid, seda soodsamalt mängid. Green fee sisaldab golfikäru, sauna ja riietusruumi.</p>
+      <div class="grid grid--3">
+        <article class="card">
+          <img src="images/green-tiigi-aares.jpg" alt="Kaks golfiautot greeni ja pilliroogse tiigi kõrval, taamal Saare Golfi klubimaja" width="900" height="600" loading="lazy">
+          <div class="card__body">
+            <span class="badge">18 rada</span>
+            <h3>Täisring</h3>
+            <p class="card__price">52–100 €</p>
+            <p>Terve 18-rajaline ring. Täpse hinna näed mänguaja valimisel.</p>
+            <a class="btn btn--primary" href="https://saaregolf.ee/saare-golfi-tii-ajad/">Vaata mängu aegu</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/green-ulalt.jpg" alt="Green ja punker tiigi kaldal otse ülalt vaadates, raja ääres kaks golfiautot" width="900" height="600" loading="lazy">
+          <div class="card__body">
+            <span class="badge">9 rada</span>
+            <h3>Kiire üheksa</h3>
+            <p class="card__price">35–70 €</p>
+            <p>Üheksa rada pärast tööd või enne õhtusööki. Golfiauto alates kella 15-st soodsamalt.</p>
+            <a class="btn btn--primary" href="https://saaregolf.ee/saare-golfi-tii-ajad/">Vaata mängu aegu</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/kuressaare-linnus.jpg" alt="Kuressaare piiskopilinnus ja vallikraav loojangu ajal" width="900" height="599" loading="lazy">
+          <div class="card__body">
+            <span class="badge">Pakett</span>
+            <h3>Golf + majutus</h3>
+            <p>Golf koos Kuressaare hotelli või spaaga. Kõik ühe kokkuleppega, sinu eest korraldatud.</p>
+            <a class="btn btn--secondary" href="#paketid">Vaata pakette</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meie lugu -->
+  <section class="section section--sand" id="lugu" aria-labelledby="lugu-h">
+    <div class="wrap story">
+      <div>
+        <p class="eyebrow">Meie lugu</p>
+        <h2 id="lugu-h">Meistritasemel golfiväljak Saaremaal</h2>
+        <p>Väljaku kavandas soome golfiarhitekt Lassi Pekka Tilander ja see avati 2008. aastal. 2019. aastal mängiti siin Estonian Amateur Openit ja Eesti löögimängu meistrivõistlusi.</p>
+        <p>Rajal näed Saaremaa kadakaid ja linde. Ja kui vedama hakkab: rada 10 on andnud 19 hole-in-one'i. Rada 10 ootab järgmist ässa.</p>
+        <a class="btn btn--secondary" href="https://saaregolf.ee/hole-in-one/">Vaata ässade nimekirja</a>
+      </div>
+      <div>
+        <ul class="stats">
+          <li><strong>18</strong>rada</li>
+          <li><strong>2008</strong>avatud</li>
+          <li><strong>40</strong>hole-in-one'i 2010–2025</li>
+          <li><strong>30</strong>mängijat korraga harjutusalal</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- KKK -->
+  <section class="section faq" id="kkk" aria-labelledby="kkk-h">
+    <div class="wrap">
+      <p class="eyebrow">Korduma kippuvad küsimused</p>
+      <h2 id="kkk-h">Enne kui tuled</h2>
+      <details>
+        <summary>Kas mul peab olema Green Card või HCP?</summary>
+        <div><p>Ei pea. Green Card ega händikäp ei ole nõutav. Broneeri aeg ja tule mängima.</p></div>
+      </details>
+      <details>
+        <summary>Kas väljak on täna lahti?</summary>
+        <div><p>Kui broneerimissüsteemis saab stardiaega broneerida, on väljak lahti. Hooaeg kestab 1. aprillist 31. oktoobrini.</p></div>
+      </details>
+      <details>
+        <summary>Kuidas broneerida tii aega?</summary>
+        <div><p>Vali vaba mängu aeg <a href="https://saaregolf.ee/saare-golfi-tii-ajad/">tii aegade lehel</a> või Saaremaa Golfi äpis. Võid ka helistada caddiemasterile: <a href="tel:+3724533502">+372 453 3502</a>.</p></div>
+      </details>
+      <details>
+        <summary>Kas saan broneeringu tühistada?</summary>
+        <div><p>Jah, tasuta kuni 24 tundi enne stardiaega.</p></div>
+      </details>
+      <details>
+        <summary>Kas saab varustust rentida?</summary>
+        <div><p>Jah. Premium golfisett koos käruga maksab 40 €, üksik kepp 2 € ja golfiauto 35–45 €.</p></div>
+      </details>
+      <details>
+        <summary>Kas lapsed saavad kaasa tulla?</summary>
+        <div><p>Jah! Iga maksev täiskasvanu võib kaasa võtta kuni kaks last vanuses kuni 12 aastat tasuta. Juuniorid kuni 21 aastat saavad 50% soodustust.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Arvustused -->
+  <section class="section section--sand" id="arvustused" aria-labelledby="arv-h">
+    <div class="wrap">
+      <p class="eyebrow">Külalised räägivad</p>
+      <h2 id="arv-h">Mida mängijad ütlevad</h2>
+      <div class="grid grid--3">
+        <figure class="review">
+          <blockquote><span class="fill">[TÄIDA: päris külalise arvustus, nt Google'ist]</span></blockquote>
+          <figcaption><span class="fill">[TÄIDA: nimi, riik, allikas]</span></figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote><span class="fill">[TÄIDA: päris külalise arvustus]</span></blockquote>
+          <figcaption><span class="fill">[TÄIDA: nimi, riik, allikas]</span></figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote><span class="fill">[TÄIDA: päris külalise arvustus]</span></blockquote>
+          <figcaption><span class="fill">[TÄIDA: nimi, riik, allikas]</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Asukoht -->
+  <section class="section" id="asukoht" aria-labelledby="asukoht-h">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Asukoht</p>
+        <h2 id="asukoht-h">Kõik on jalutuskäigu kaugusel</h2>
+        <p>Väljak asub Kuressaare linnas, aadressil Merikotka 35. Golf, spaa, restoranid ja vanalinn on käe-jala juures.</p>
+        <a class="btn btn--secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Merikotka+35+Kuressaare">Ava kaardil</a>
+      </div>
+      <ul class="list-plain">
+        <li><strong>Kesklinnast:</strong> 15 min jala, 5 min autoga</li>
+        <li><strong>Hotellidest:</strong> umbes 5 min autoga</li>
+        <li><strong>Kuressaare lennujaamast:</strong> 7 min autoga</li>
+        <li><strong>Parkimine:</strong> tasuta, väljaku juures</li>
+        <li><strong>Saaremaale:</strong> <span class="fill">[TÄIDA: praam ja lend, sõiduajad]</span></li>
+        <li><strong>Ligipääsetavus:</strong> <span class="fill">[TÄIDA: klubimaja, restoran, golfiauto]</span></li>
+      </ul>
+    </div>
+  </section>
+</div><!-- /home -->
+
+<!-- ================= ALAMLEHT 1: HINNAD ================= -->
+<section class="page section" id="hinnad" aria-labelledby="hinnad-h" tabindex="-1">
+  <div class="wrap">
+    <a class="back" href="#top">← Avalehele</a>
+    <h2 id="hinnad-h">Hinnad 2026</h2>
+    <p class="lead">Green fee hind on dünaamiline: see sõltub nõudlusest ja vabadest aegadest. Mida varem broneerid, seda rohkem säästad. Lõpliku hinna näed broneerides.</p>
+    <div class="table-wrap">
+      <table>
+        <caption class="small" style="text-align:left;padding:.5rem 0;">Kõik hinnad sisaldavad käibemaksu. Green fee sisaldab golfikäru, sauna ja riietusruumi.</caption>
+        <thead><tr><th scope="col">Teenus</th><th scope="col">Hind</th><th scope="col">Märkus</th></tr></thead>
+        <tbody>
+          <tr><td>Green fee 18 rada</td><td>52–100 €</td><td>Dünaamiline hind</td></tr>
+          <tr><td>Green fee 9 rada</td><td>35–70 €</td><td>Dünaamiline hind</td></tr>
+          <tr><td>Juunior kuni 21 a.</td><td>−50%</td><td>9 või 18 rada</td></tr>
+          <tr><td>Lapsed kuni 12 a.</td><td>Tasuta</td><td>Kuni 2 last iga maksva täiskasvanuga</td></tr>
+          <tr><td>PGA PRO koos green fee mängijaga</td><td>Tasuta</td><td></td></tr>
+          <tr><td>Golfiauto 18 rada</td><td>45 €</td><td>Alates 15:00 40 €</td></tr>
+          <tr><td>Golfiauto 9 rada</td><td>40 €</td><td>Alates 15:00 35 €</td></tr>
+          <tr><td>Premium golfiseti laenutus</td><td>40 €</td><td>Sisaldab käru</td></tr>
+          <tr><td>Golfikepi rent</td><td>2 €</td><td>Ühe kepi kohta</td></tr>
+          <tr><td>Harjutuspallid</td><td>3 €</td><td>24 palli, korduvlaetav kaart 10 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:var(--space-3)"><strong>Tühistamine:</strong> tasuta kuni 24 tundi enne stardiaega.</p>
+    <a class="btn btn--primary" href="https://saaregolf.ee/saare-golfi-tii-ajad/">Broneeri tii aeg</a>
+  </div>
+</section>
+
+<!-- ================= ALAMLEHT 2: GOLF + MAJUTUS ================= -->
+<section class="page section" id="paketid" aria-labelledby="paketid-h" tabindex="-1">
+  <div class="wrap">
+    <a class="back" href="#top">← Avalehele</a>
+    <h2 id="paketid-h">Golf + majutus Kuressaares</h2>
+    <p class="lead">Ära korralda väljakut, hotelli ja toitlustust eraldi. Paneme kõik kokku ühe kokkuleppega, ja hotell on väljakust umbes viie autominuti kaugusel.</p>
+    <div class="grid grid--3">
+      <article class="card">
+        <div class="card__body">
+          <span class="badge">Sõpradele</span>
+          <h3>Golfinädalavahetus</h3>
+          <p class="card__price"><span class="fill">[TÄIDA: hind alates €/in]</span></p>
+          <p><span class="fill">[TÄIDA: ööd, ringid, mis sisaldub]</span></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <span class="badge">Spaa</span>
+          <h3>Golf ja spaa</h3>
+          <p class="card__price"><span class="fill">[TÄIDA: hind alates €/in]</span></p>
+          <p><span class="fill">[TÄIDA: partnerhotell ja sisu]</span></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <span class="badge">Perele</span>
+          <h3>Perepuhkus golfiga</h3>
+          <p class="card__price"><span class="fill">[TÄIDA: hind alates €/in]</span></p>
+          <p>Kuni kaks last vanuses kuni 12 aastat mängivad maksva täiskasvanuga tasuta.</p>
+        </div>
+      </article>
+    </div>
+    <h3 style="margin-top:var(--space-4)">Meie majutuspartnerid</h3>
+    <ul class="list-plain">
+      <li>Arensburg Boutique Hotel &amp; Spa</li>
+      <li>Asa Spa Hotell</li>
+      <li>Ekesparre Butiikhotell</li>
+      <li>GOSPA</li>
+      <li>Grand Rose Spa Hotel</li>
+      <li>Güldenstubbe Residentsid</li>
+      <li>Johan Spa Hotell</li>
+      <li>Pilguse Residency</li>
+      <li>Saaremaa Rannahotell</li>
+    </ul>
+    <p style="margin-top:var(--space-3)">Transfeer hotellide, spaade ja väljaku vahel on võimalik kokkuleppel.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="mailto:rein.raudsepp@saaregolf.ee?subject=Golf%20%2B%20majutus%20p%C3%A4ring">Küsi pakkumist</a>
+      <a class="btn btn--secondary" href="https://saaregolf.ee/store/">Vaata e-poodi</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ALAMLEHT 3: GRUPID ================= -->
+<section class="page section" id="grupid" aria-labelledby="grupid-h" tabindex="-1">
+  <div class="wrap">
+    <a class="back" href="#top">← Avalehele</a>
+    <h2 id="grupid-h">Grupid, firmapäevad ja võistlused</h2>
+    <p class="lead">Firmapäev, sõprade turniir või oma võistlus Saaremaal. Alates 12 mängijast saad grupi soodushinna.</p>
+    <div class="grid grid--3">
+      <article class="card"><div class="card__body">
+        <h3>Grupihind</h3>
+        <p>Vähemalt kolm järjestikust tii aega ehk 12 mängijat. Hind kokkuleppel.</p>
+      </div></article>
+      <article class="card"><div class="card__body">
+        <h3>Oma võistlus</h3>
+        <p>Väljakurent, korraldus ja reklaam sinu ürituse jaoks. Hind kokkuleppel.</p>
+      </div></article>
+      <article class="card"><div class="card__body">
+        <h3>Majutus ja transfeer</h3>
+        <p>Korraldame majutuse Kuressaare hotellides ja transpordi väljakule.</p>
+      </div></article>
+    </div>
+    <p style="margin-top:var(--space-4)">Kirjuta müügijuhile ja paneme sinu päeva kokku:</p>
+    <a class="btn btn--primary" href="mailto:rein.raudsepp@saaregolf.ee?subject=Grupi%20p%C3%A4ring">Saada grupipäring</a>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section class="section section--sand contact" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow">Kontakt</p>
+      <h2 id="kontakt-h">Küsi julgelt</h2>
+      <p>Mängu aegade, varustuse rendi ja muude küsimustega aitab caddiemaster.</p>
+      <a class="btn btn--primary" href="https://saaregolf.ee/saare-golfi-tii-ajad/">Broneeri aeg</a>
+    </div>
+    <ul class="list-plain">
+      <li><strong>Helista:</strong> <a href="tel:+3724533502">+372 453 3502</a></li>
+      <li><strong>E-post:</strong> <a href="mailto:booking@saaregolf.ee">booking@saaregolf.ee</a></li>
+      <li><strong>Aadress:</strong> Merikotka 35, 93810 Kuressaare, Saaremaa</li>
+      <li><strong>Lahtiolekuajad:</strong> <span class="fill">[TÄIDA: caddiemaster ja klubimaja kellaajad]</span></li>
+      <li><strong>Restoran Figo:</strong> <span class="fill">[TÄIDA: lahtiolekuajad]</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= JALUS ================= -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <h2>Saaremaa Golf &amp; Country Club</h2>
+      <p>Merikotka 35, 93810 Kuressaare<br>Saaremaa, Eesti</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <p><a href="tel:+3724533502">+372 453 3502</a><br><a href="mailto:booking@saaregolf.ee">booking@saaregolf.ee</a></p>
+    </div>
+    <div>
+      <h2>Jälgi meid</h2>
+      <p><a href="https://www.facebook.com/saaregolf">Facebook</a> · <a href="https://www.instagram.com/saaregolf">Instagram</a></p>
+      <p><a href="https://saaregolf.ee/privacy-statement-eu/">Andmekaitsetingimused</a></p>
+    </div>
+  </div>
+  <div class="wrap"><small>© Saare Golf OÜ</small></div>
+</footer>
+
+<!-- Kleepuv broneerimisnupp (ainult mobiilis) -->
+<div class="sticky-book">
+  <a class="btn btn--primary" href="https://saaregolf.ee/saare-golfi-tii-ajad/">Broneeri tii aeg</a>
+</div>
+
+<script>
+(function () {
+  var btn = document.querySelector('.menu-toggle');
+  var nav = document.getElementById('menu');
+  function setMenu(open) {
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Sulge menüü' : 'Ava menüü');
+    nav.classList.toggle('open', open);
+  }
+  btn.addEventListener('click', function () {
+    setMenu(btn.getAttribute('aria-expanded') !== 'true');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') setMenu(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setMenu(false);
+  });
+  // Alamlehe avamisel liigu lehe algusse ja vii fookus sinna
+  function focusPage() {
+    var page = document.querySelector('.page:target');
+    if (page) { window.scrollTo(0, 0); page.focus({ preventScroll: true }); }
+  }
+  window.addEventListener('hashchange', focusPage);
+  focusPage();
+})();
+</script>
+</body>
+</html>
